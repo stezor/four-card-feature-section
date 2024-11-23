@@ -19,5 +19,129 @@
 
 body {
   margin: 0;
+  background-color: var(--very-light-gray);
   font-family: "Poppins", sans-serif;
+  color: var(--very-dark-blue);
+}
+
+main {
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1,
+main h2,
+main p {
+  text-align: center;
+}
+
+main h1 {
+  font-size: 24px;
+  font-weight: var(--thin);
+}
+
+main h2 {
+  font-size: 24px;
+  font-weight: var(--thick);
+}
+
+main p {
+  margin-bottom: 80px;
+  color: var(--grayish-blue);
+}
+
+.feature-card {
+  border-top: 4px solid transparent;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: var(--very-light-gray);
+  box-shadow: 0 2px 16px var(--grayish-blue);
+}
+
+.feature-card--supervisor {
+  border-top-color: var(--cyan);
+}
+
+.feature-card--team-builder {
+  border-top-color: var(--red);
+}
+
+.feature-card--karma {
+  border-top-color: var(--orange);
+}
+
+.feature-card--calculator {
+  border-top-color: var(--blue);
+}
+
+.feature-card--supervisor,
+.feature-card--team-builder,
+.feature-card--karma {
+  margin-bottom: 24px;
+}
+
+.feature-card p {
+  text-align: start;
+}
+
+.feature-card h3 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: var(--thick);
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.feature-card span {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 48px;
+}
+
+@media screen and (min-width: 48rem) {
+  main p {
+    margin: 16px;
+  }
+
+  main section:first-of-type {
+    max-width: 560px;
+  }
+
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 32px;
+    width: 100%;
+    max-width: 1080px;
+  }
+
+  .feature-card {
+    margin: 0;
+  }
+
+  .feature-card--supervisor {
+    grid-column: 1 / 5;
+    grid-row: 5 / 9;
+  }
+
+  .feature-card--team-builder {
+    grid-column: 5 / 9;
+    grid-row: 3 / 7;
+  }
+
+  .feature-card--karma {
+    grid-column: 5 / 9;
+    grid-row: 7 / 11;
+  }
+
+  .feature-card--calculator {
+    grid-column: 9 / 13;
+    grid-row: 5 / 9;
+  }
 }
